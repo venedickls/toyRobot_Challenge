@@ -7,7 +7,7 @@ This is a simple Python implementation of a toy robot simulator. The simulator a
 1. Clone the repository to your local machine:
 
 
-2. Navigate to the directory:
+2. Navigate to the directory: .venv/Scripts/toyRobot.py #actual code
 
 
 3. Run the Python script:
