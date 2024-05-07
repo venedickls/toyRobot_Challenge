@@ -13,7 +13,7 @@ This is a simple Python implementation of a toy robot simulator. The simulator a
 3. Run the Python script:
 
     ```
-    python toy_robot.py
+    python toyRobot.py
     ```
 4. Follow the on-screen instructions to interact with the toy robot simulator. You can issue commands such as `place`, `move`, `left`, `right`, `report`, and `exit`.
 
