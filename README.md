@@ -70,5 +70,6 @@ Enter command (place/move/left/right/report/exit):
 ## Assumptions
 
 - All commands are case-insensitive.
+- put space after coma e.g place(0, 0, 'NORTH') when input place function.
 - The position and direction are integers and strings, respectively, as specified in the problem statement.
 
