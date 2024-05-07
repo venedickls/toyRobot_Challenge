@@ -12,7 +12,6 @@ class ToyRobot:
             self.x = x
             self.y = y
             self.direction = direction.upper()  # Convert direction to uppercase
-            print("Robot placed successfully.")
         else:
             print("Invalid placement command. Please ensure the coordinates are within the grid boundaries.")
 
@@ -65,25 +64,41 @@ def main():
     while True:
         # Prompt the user to enter a command
         command = input("Enter command (place/move/left/right/report/exit): ").lower()
-        if command == 'exit':
+        # Find the index of the opening parenthesis
+        paren_index = command.find('(')
+        # Extract the substring before the opening parenthesis
+        command_str = command[:paren_index].strip()  # Remove leading/trailing whitespace
+
+        if command_str == 'exit':
             print("Exiting program.")
             break
-        elif command == 'place':
-            # Prompt the user to enter position and direction
-            x = int(input("Enter x coordinate: "))
-            y = int(input("Enter y coordinate: "))
-            direction = input("Enter direction (NORTH/SOUTH/EAST/WEST): ").upper()
+        elif command_str == 'place':
+            # Extract the coordinates and direction
+            comma_index = command.find(',')
+            x_start = paren_index + 1
+            x_end = comma_index
+            y_start = comma_index + 2  # Skip the comma and space
+            y_end = command.find(',', y_start)
+            direction_start = y_end + 3  # Skip the comma, space, and single quote
+            direction_end = command.find("'", direction_start)
+
+            # Extract and convert the coordinates
+            x = int(command[x_start:x_end].strip())
+            y = int(command[y_start:y_end].strip())
+            direction = command[direction_start:direction_end].strip().upper()
+
             robot.place(x, y, direction)
-        elif command == 'move':
+        elif command_str == 'move':
             robot.move()
-        elif command == 'left':
+        elif command_str == 'left':
             robot.left()
-        elif command == 'right':
+        elif command_str == 'right':
             robot.right()
-        elif command == 'report':
+        elif command_str == 'report':
             robot.report()
         else:
-            print("Invalid command. Please enter a valid command.")
+            print("Invalid command.")
+            break
 
 
 if __name__ == "__main__":
