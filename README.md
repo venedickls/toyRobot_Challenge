@@ -27,21 +27,36 @@ This is a simple Python implementation of a toy robot simulator. The simulator a
 ## Example
 ![image](https://github.com/venedickls/toyRobot_Challenge/assets/43608289/3e68bac7-aea5-4095-9766-7b17f877639a)
 
-\nEnter command (place/move/left/right/report/exit): place(0, 0, 'NORTH')
-Enter command (place/move/left/right/report/exit): move()
-Enter command (place/move/left/right/report/exit): report()
-Output: 0, 1, NORTH
 Enter command (place/move/left/right/report/exit): place(0, 0, 'NORTH')
-Enter command (place/move/left/right/report/exit): left()
+
+Enter command (place/move/left/right/report/exit): move()
+
 Enter command (place/move/left/right/report/exit): report()
+
+Output: 0, 1, NORTH
+
+Enter command (place/move/left/right/report/exit): place(0, 0, 'NORTH')
+
+Enter command (place/move/left/right/report/exit): left()
+
+Enter command (place/move/left/right/report/exit): report()
+
 Output: 0, 0, WEST
+
 Enter command (place/move/left/right/report/exit): place(1, 2, 'EAST')
+
 Enter command (place/move/left/right/report/exit): move()
+
 Enter command (place/move/left/right/report/exit): move()
+
 Enter command (place/move/left/right/report/exit): left()
+
 Enter command (place/move/left/right/report/exit): move()
+
 Enter command (place/move/left/right/report/exit): report()
+
 Output: 3, 3, NORTH
+
 Enter command (place/move/left/right/report/exit): 
 
 
