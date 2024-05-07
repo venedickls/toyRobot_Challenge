@@ -1,4 +1,4 @@
-![image](https://github.com/venedickls/toyRobot_Challenge/assets/43608289/cff34a5e-4677-4e56-b7a0-fb3153f7f709)# Toy Robot Simulator (Challenge)
+# Toy Robot Simulator (Challenge)
 
 This is a simple Python implementation of a toy robot simulator. The simulator allows you to place a toy robot on a 5x5 grid tabletop and issue commands to move and rotate it.
 
